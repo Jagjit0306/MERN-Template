@@ -12,7 +12,7 @@ async function getNewToken(todo) {
       // logout or something
       console.log('approval says token is invalid')
       console.log("Couldnt verify. Logging out.")
-      window.location.href='/'
+      window.location.href='/login'
       return false
     }
 }

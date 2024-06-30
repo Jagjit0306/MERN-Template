@@ -9,7 +9,7 @@ async function logout() {
       })
       if(fetchResponse.status == 200) {
         console.log('Logged out successfully.')
-        window.location.href='/'
+        window.location.href='/login'
       }
       else if(fetchResponse.status == 403){ // also use code 401 ?
         getNewToken(logout)

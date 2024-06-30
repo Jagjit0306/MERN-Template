@@ -54,8 +54,10 @@ function RegisterForm() {
 
     async function submitForm(){
         if(formData.username && formData.password) {
-            if (availability)
-            await register(formData)
+            if (availability) {
+                const response = await register(formData)
+                if(response) window.location.href='/'
+            }
             else alert('That username is taken. Please choose another one.')
         }
         else alert('Fill the form first')

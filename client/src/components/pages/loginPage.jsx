@@ -23,7 +23,7 @@ function LoginForm() {
     async function submitForm(){
         if(formData.username && formData.password) {
             const loginStatus = await login(formData)
-            if(loginStatus) window.location.href = '/home'
+            if(loginStatus) window.location.href = '/'
         }
         else alert('Fill the form first')
         setFormData({username:'', password:''})
@@ -79,7 +79,7 @@ async function handleAutoLogin() {
     const autoLoginStatus = await handleAutoLogin_Fetch()
     if(autoLoginStatus) {
         console.log('Logged in automatically !')
-        window.location.href = '/home'
+        window.location.href = '/'
     }
     else console.log('No saved login found.')
 }

@@ -19,7 +19,7 @@ function HomeButton(props) {
 
     return (
         <>
-            <Link to='/home'>
+            <Link to='/'>
                 <Box style={homeButtonStyle}>
                     <Text color='black'>
                         Logo
