@@ -1,7 +1,5 @@
 # MERN App Boilerplate
 
-Got it, here's a more balanced version:
-
 Kickstart your next MERN stack application with this sleek and efficient boilerplate. Designed for quick development and scalability, this template provides a solid foundation to turn your creative ideas into functional web applications.
 
 ## Table of Contents
