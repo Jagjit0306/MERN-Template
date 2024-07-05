@@ -54,15 +54,14 @@ function LoginForm() {
 }
 
 async function handleAutoLogin_Fetch() {
-    if(!getCookie('REFRESHTOKEN')) return false
-
     try {
         const response = await fetch(process.env.REACT_APP_BACKEND_URL+'/api/validateToken', {
             method: "POST",
             body: JSON.stringify({token: getCookie('REFRESHTOKEN')}),
             headers: {
                 'Content-Type': 'application/json',
-            }
+            },
+            credentials: 'include'
         })
         if (response.status == 200) {
             const validity = await response.json()

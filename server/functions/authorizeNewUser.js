@@ -19,11 +19,13 @@ async function authorizeNewUser(res, userPayLoad) {
         res.cookie('AT', accessToken, {
             httpOnly: true,
             sameSite: 'strict',
+            secure: 'true',
             path: '/'
         })
         res.cookie('RT', refreshToken, {
             httpOnly: true,
             sameSite: 'strict',
+            secure: 'true',
             path: '/'
         })
         res.json({status:'complete'})

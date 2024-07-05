@@ -17,8 +17,7 @@ async function Token (req, res) {
                 const accessToken = generateAccessToken({userid: user.userid})
                 res.cookie('AT', accessToken, {
                     httpOnly: true,
-                    // sameSite: 'strict',
-                    sameSite: 'lax',
+                    sameSite: 'strict',
                     secure: 'true',
                     path: '/'
                 })
