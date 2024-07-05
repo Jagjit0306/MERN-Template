@@ -10,6 +10,7 @@ Kickstart your next MERN stack application with this sleek and efficient boilerp
   - [Server Environment Variables](#server-environment-variables)
   - [Client Environment Variables](#client-environment-variables)
 - [Usage](#usage)
+- [Deployment](#deployment)
 - [Project Structure](#project-structure)
 - [Contributing](#contributing)
 - [License](#license)
@@ -32,17 +33,12 @@ Kickstart your next MERN stack application with this sleek and efficient boilerp
    cd MERN-Template
    ```
 
-2. **Install dependencies for the server**
+2. **Install dependencies for the server and client**
 
    ```bash
    cd server
    npm install
-   ```
-
-3. **Install dependencies for the client**
-
-   ```bash
-   cd ../client
+   cd client
    npm install
    ```
 
@@ -74,7 +70,7 @@ DATABASE1_KEY=yourmongodbconnectionstring
 
 ### Client Environment Variables
 
-Location: `./client/.env`
+Location: `./server/client/.env`
 
 #### Should Include
 
@@ -98,7 +94,7 @@ REACT_APP_BACKEND_URL=http://localhost:5000
 2. **Start the client**
 
    ```bash
-   cd ../client
+   cd server/client
    npm start
    ```
 
@@ -106,20 +102,47 @@ REACT_APP_BACKEND_URL=http://localhost:5000
 
    Navigate to `http://localhost:3000` to see your application in action.
 
+## Deployment
+
+For deployment, follow these steps:
+
+1. **Set `/server` as the root directory**
+
+2. **Use `npm run build` as the build command**
+
+3. **Use `npm run start` as the start command**
+
+4. **Set environment variables**:
+
+   - `REACT_APP_BACKEND_URL` to the domain name of your backend server.
+   - `FRONTEND_URL` to the domain name of your frontend application.
+
 ## Project Structure
 
 ```plaintext
 mern-app-boilerplate/
-├── client/                # React frontend
-│   ├── public/
-│   └── src/
-├── server/                # Express backend
+├── server/                # Express backend and React frontend
+│   ├── client/            # React frontend
+│   │   ├── build/
+│   │   ├── node_modules/
+│   │   ├── public/
+│   │   ├── src/
+│   │   ├── .env
+│   │   ├── .gitignore
+│   │   ├── package-lock.json
+│   │   └── package.json
+│   ├── controller/
 │   ├── functions/
 │   ├── models/
+│   ├── node_modules/
+│   ├── .env
+│   ├── .gitignore
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── routes.js
 │   └── server.js
-├── .gitignore
+├── LICENSE
 ├── README.md
-└── package.json
 ```
 
 ## Contributing
