@@ -21,7 +21,5 @@ app.listen(process.env.SERVER_PORT, ()=>{
 
 app.use('/api', require('./routes'))
 
-
-app.get('/', (req, res)=>{
-    res.send('Welcome to my server, enjoy')
-})
+app.use(express.static(__dirname + '/client/build'))
+app.get('*', (req, res)=> res.sendFile(__dirname+'/client/build/index.html'))
