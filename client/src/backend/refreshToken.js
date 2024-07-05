@@ -2,7 +2,7 @@ async function newToken() {
     // 401 -> token not sent
     // 403 -> refresh token invalid
     try {
-        const fetchResponse = await fetch(process.env.REACT_APP_BACKEND_URL+'/token', {
+        const fetchResponse = await fetch(process.env.REACT_APP_BACKEND_URL+'/api/token', {
           method: "POST",
           headers: { 'Content-Type': 'application/json',},
           credentials: 'include'

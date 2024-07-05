@@ -1,6 +1,6 @@
 async function login(payload){
     try {
-      const response = await fetch(process.env.REACT_APP_BACKEND_URL+'/login', {
+      const response = await fetch(process.env.REACT_APP_BACKEND_URL+'/api/login', {
         method: "POST",
         body: JSON.stringify(payload),
         headers: { 'Content-Type': 'application/json',},
