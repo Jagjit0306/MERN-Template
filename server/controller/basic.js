@@ -1,6 +1,8 @@
 const refreshTokens = require('../models/tokens')
 const users = require('../models/users')
 
+const generateAccessToken = require('../functions/generateAccessToken')
+
 const jwt = require('jsonwebtoken')
 const dotenv = require('dotenv')
 dotenv.config({path: '../.env'})
